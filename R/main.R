@@ -5,6 +5,7 @@ setwd('/home/jelle/Repositories/bruinvis/project_folder/R')
 source('requirements.R')
 source('chi_plot.R')
 
+csvfile = "../data/MarineRegions.csv"
 
 # if not present in data folder, download input file from https://knb.ecoinformatics.org/view/doi:10.5063/F12B8WBS 
 destfile = '../data/cumulative_impact_2008.tif'
@@ -42,7 +43,7 @@ r1 <- raster(cropped_file)
 #eez_table <- mr_names('MarineRegions:eez')
 
 ## Create maps
-d2 <- read.csv("../data/MarineRegions_bruinvissen2.csv", sep=";")
+d2 <- read.csv(csvfile, sep=";")
 CI_mean=c(); CI_median=c(); CI_min=c(); CI_max=c()
 CI_mean[1] = 0; CI_median[1] = 0; CI_min[1] = 0; CI_max[1] = 0
 
@@ -91,7 +92,7 @@ for (i in unique(d2$ID)) {
         st_crs(h) <- c1
         region <- st_difference(region, h)
         
-      }else if (d2$X[d2$ID == i][j] == "include"){
+      }else if (d2$include[d2$ID == i][j] == "include"){
         region = st_union(region, regions[[j]])
       } else if (d2$X[d2$ID == i][j] == "exclude"){
         region <- st_difference(region, regions[[j]])
