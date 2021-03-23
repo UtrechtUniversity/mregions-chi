@@ -29,4 +29,4 @@ The purpose of the include column is to decide whether to add or subtract a poly
 CHI maps with outline of the polygon.  
 results.csv file containing the mean, median, min and max CHI in the polygon
 
-![ID = 1](https://github.com/UtrechtUniversity/mregions-chi/blob/master/images/Kattegat Skagerrak Seas.png?raw=true)
+![ID = 1](https://github.com/UtrechtUniversity/mregions-chi/blob/master/images/Kattegat-Skagerrak-Seas.png?raw=true)
