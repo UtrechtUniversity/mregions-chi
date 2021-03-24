@@ -1,3 +1,5 @@
+## based on https://github.com/iobis/mregions/blob/master/R/mr_gazetteer.R
+
 fetch_feature <- function(url) {
   ft <- sf::read_sf(url)
   if(nrow(ft) == 0) {
