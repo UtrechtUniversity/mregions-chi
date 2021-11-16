@@ -15,7 +15,7 @@ The purpose of the include column is to decide whether to add or subtract a poly
 
 ## Configuration steps
 
-- Change working directory in main script
+- Change working directory in main.R script
 - Change input file path if necessary
 - Change cropping parameters (line 28) if marine regions lie outside these coordinates
 
